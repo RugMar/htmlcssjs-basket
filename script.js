@@ -120,25 +120,25 @@ function clearClick() {
 }
 
 function playerSelection(players) {
-  var me = (this)
-  var selectedId = me.val("")
+  var me = $("#usr-input")
+  var selectedId = me.val()
   var player = getPlayerById(selectedId, players)
 
 //son tutte var = $("#id  > span.content")
-  var idDom = $(div.player-wrapper > span.content)
-  var pointDom = $(div.player-wrapper > span.content)
-  var bouncesDom = $(div.player-wrapper > span.content)
-  var mistakeDom = $(div.player-wrapper > span.content)
-  var twoPercDom = $(div.player-wrapper > span.content)
-  var pointDom = $(div.player-wrapper > span.content)
+  var idDom = $("#id > span.content")
+  var pointDom = $("#points > span.content")
+  var bouncesDom = $("#bounces > span.content")
+  var mistakeDom = $("#mistake > span.content")
+  var twoPercDom = $("#twoPerc > span.content")
+  var pointDom = $("#threePerc > span.content")
 
 
-  idDom.text(player.id)
-  pointDom.text(player.points)
-  bouncesDom.text(player.points)
-  mistakeDom.text(player.points)
-  twoPercDom.text(player.twoPerch + "%")
-  threePercDom.text(player.points + "%")
+  idDom.text(player.id);
+  pointDom.text(player.points);
+  bouncesDom.text(player.bounces);
+  mistakeDom.text(player.mistake);
+  twoPercDom.text(player.twoPerc + "%");
+  threePercDom.text(player.threePerc + "%");
 }
 
 
