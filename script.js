@@ -130,7 +130,7 @@ function playerSelection(players) {
   var bouncesDom = $("#bounces > span.content")
   var mistakeDom = $("#mistake > span.content")
   var twoPercDom = $("#twoPerc > span.content")
-  var pointDom = $("#threePerc > span.content")
+  var threePercDom = $("#threePerc > span.content")
 
 
   idDom.text(player.id);
