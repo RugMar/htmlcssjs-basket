@@ -36,17 +36,17 @@ function getRandomId() {
 function getRandomPlayer() {
   //PLAYER =
   //"ID", "POINTS", "BOUNCE"
-  var twoPerch = getRandom(0, 100);
+  var twoPerc = getRandom(0, 100);
 
-  var threePerch = 100 - twoPerch;
+  var threePerc = 100 - twoPerc;
 
   var player = {
     "id" : getRandomId(0, 100),
-    "point" : getRandom(0, 100),
-    "bounce" : getRandom(0, 500),
+    "points" : getRandom(0, 100),
+    "bounces" : getRandom(0, 500),
     "mistake" : getRandom(0, 50),
-    "twoPerch" : twoPerch,
-    "threePerch" : threePerch,
+    "twoPerc" : twoPerc,
+    "threePerc" : threePerc,
   }
   return player;
 }
@@ -111,25 +111,34 @@ function updateUI(players) {
 function clearClick() {
   var inputText = $("#usr-input");
   inputText.val("");
-  //QUI INSERISCI idDom.val("")
+  idDom.val("");
+  pointDom.val("");
+  bouncesDom.val("");
+  mistakeDom.val("");
+  twoPercDom.val("");
+  threePercDom.val("");
 }
 
 function playerSelection(players) {
   var me = (this)
-  var selectedId = me.val()
+  var selectedId = me.val("")
   var player = getPlayerById(selectedId, players)
 
 //son tutte var = $("#id  > span.content")
-  var idDom = $(#lini > span.content)
-  "point" : getRandom(0, 100),
-  "bounce" : getRandom(0, 500),
-  "mistake" : getRandom(0, 50),
-  "twoPerch" : twoPerch,
-  "threePerch" : threePerch,
+  var idDom = $(div.player-wrapper > span.content)
+  var pointDom = $(div.player-wrapper > span.content)
+  var bouncesDom = $(div.player-wrapper > span.content)
+  var mistakeDom = $(div.player-wrapper > span.content)
+  var twoPercDom = $(div.player-wrapper > span.content)
+  var pointDom = $(div.player-wrapper > span.content)
+
 
   idDom.text(player.id)
   pointDom.text(player.points)
-  twoPerch.text(player.twoPerch + "%")
+  bouncesDom.text(player.points)
+  mistakeDom.text(player.points)
+  twoPercDom.text(player.twoPerch + "%")
+  threePercDom.text(player.points + "%")
 }
 
 
